@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Necesario para el posicionamiento absoluto del pseudo-elemento */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fija la imagen al fondo de la ventana */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/trans.jpg'); /* Ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    opacity: 0.5; /* Cambia este valor para ajustar la transparencia */
+    z-index: -1; /* Envía el pseudo-elemento detrás del contenido */
+}
+ 
+
+h2 {
+    font-size: 26px; /* Tamaño más grande */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+    margin-bottom: 20px; /* Espacio entre el título y las preguntas */
+    color: #333; /* Un color más oscuro para que resalte */
+}
+
+p {
+    text-align: center;
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    color: #333; /* Color opcional */
+}
+
+
+.logo {
+    margin: 10px;
+    cursor: pointer;
+    transform: translateX(298px);
+}
+
+.logo img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(61, 59, 59, 0.277);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin: 0 auto;
+}                      
+
+/* ESTILO PARA LOS ENLACES */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-254px); /* Mueve los enlaces 30px a la izquierda */
+}
+
+
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d48a6f;
+}
+
+.navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: #CE967B;
+}
+
+
+
+.container {
+    width: 80%;
+    max-width: 800px; /* Ajusta el ancho máximo para centrar mejor */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px; /* Aumenta el espacio entre los campos */
+    margin-bottom: 15px; /* Espacio entre las filas */
+}
+
+.form-row div {
+    flex: 1;
+    margin-right: 10px; /* Añade un margen derecho a cada div */
+}
+
+
+.form-row div:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último div */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Asegura que esté alineado verticalmente */
+    margin-top: 20px; /* Agrega espacio arriba si es necesario */
+}
+
+.btn-1 {
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #daa185;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+/* Efecto hover */
+.btn-1:hover {
+    background-color: #EACCB3;
+}
+
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px; /* Añadir margen inferior para separar del botón */
+}
+
+legend {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.checkbox-group label { 
+    flex-direction: column; 
+    margin-bottom: 5px; /* Espacio entre las opciones de checkbox */
+}
+
+
+
+
+.checkbox-group input {
+    margin-right: 8px;
+}
+
+/* Nueva clase para separar el campo de seguro de vida del botón */
+#seguro_vida {
+    width: 100%;
+    height: 60px; /* Mantiene el tamaño como "Describa alguna enfermedad" */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: none; /* Evita que el usuario lo agrande */
+    text-align: left; /* Asegura alineación a la izquierda */
+    vertical-align: top; /* Alinea el texto arriba (solución clave) */
+}

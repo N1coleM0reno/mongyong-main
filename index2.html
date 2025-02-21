@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="img/logo_mark.png">
+    <title>TRANZACT FORM</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/uuuu-Photoroom.png" alt="Logo" width="100">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="index4.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        <h2>Formulario de Seguro de Vida</h2>
+        <form onsubmit="enviarFormulario(event)" method="POST" action="index3.html">
+
+            <div class="form-row">
+                <div>
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="telefono">Número de Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" minlength="9" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="fecha_nac">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nac" name="fecha_nac" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="plan">¿Qué plan de vida?</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Seleccione</option>
+                        <option value="basico">Básico</option>
+                        <option value="premium">Plus</option>
+                        <option value="premium">Integral</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="presupuesto">¿Cuánto le gustaría pagar?</label>
+                    <input type="number" id="presupuesto" name="presupuesto" min="0" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="altura">Altura (cm)</label>
+                    <input type="number" id="altura" name="altura" min="50" max="250" required>
+                </div>
+                <div>
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" min="20" max="300" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="enfermedades">Describa alguna enfermedad que tenga</label>
+                    <textarea id="enfermedades" name="enfermedades" rows="3" style="resize: none;" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="seguro_vida">Por favor, añadid comentarios adicionales</label>
+                    <textarea id="seguro_vida" name="seguro_vida"></textarea>
+                </div>
+            </div>
+            
+            <div class="botones">
+                <a href="index.html" class="btn-1">Regresar</a>
+                <button class="btn-1" type="submit">Enviar</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+
+
+</body>
+</html>

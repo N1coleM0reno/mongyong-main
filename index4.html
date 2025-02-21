@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="img/logo_mark.png">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            font-size: 22px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(img/p.webp);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .logo {
+            margin: 10px;
+            cursor: pointer;
+            transform: translateX(298px);
+        }
+
+        .logo img {
+            width: 50px; /* Ajusta el tamaño de la imagen */
+            height: auto;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(61, 59, 59, 0.277);
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            margin: 0 auto;
+        }                      
+
+        /* ESTILO PARA LOS ENLACES */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            transform: translateX(-254px); /* Mueve los enlaces 30px a la izquierda */
+        }
+
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d48a6f;
+        }
+
+        .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+        .navbar ul li a {
+            font-size: 18px;
+            padding: 20px;
+            color: #FFFDFC;
+            display: block;
+            font-weight: 600;
+        }
+
+        .navbar ul li a:hover {
+            color: #CE967B;
+        }
+
+
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-info, .schedule {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .contact-info p, .schedule ul li {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .map-container {
+            margin-top: 20px;
+        }
+
+        .whatsapp-button {
+            margin-top: 20px;
+        }
+
+        .whatsapp-button a img {
+            width: 50px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social {
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .youtube { background-color: rgba(185, 138, 76, 0.819); }
+        .instagram { background-color: #cd8257e3; }
+        .twitter { background-color: #3f7699; }
+        .facebook { background-color: #4c9547; }
+
+        .social:hover {
+            opacity: 0.8;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ebae89;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #daa185;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/uuuu-Photoroom.png" alt="Logo" width="100">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="index4.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h2>Redes</h2>
+        <p>Síguenos en nuestras redes sociales</p>
+        <section class="social-links">
+            <a href="https://www.youtube.com/@transactcampusinc2160" class="social youtube" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/wearetranzact/" class="social instagram" target="_blank">Instagram</a>
+            <a href="https://x.com/LetsTranZact" class="social twitter" target="_blank">X (Twitter)</a>
+            <a href="https://www.facebook.com/TRANZACTperu" class="social facebook" target="_blank">Facebook</a>
+        </section>
+    </div>
+
+    <div class="container">
+        <h2>Información de Contacto</h2>
+        <section class="contact-info">
+                <p><strong>Correo Electrónico:</strong> press@tranzact.net</p>
+                <p><strong>Teléfono:</strong> (201) 242 3702</p>
+                <p><strong>Dirección:</strong> Fort Lee, Nueva Jersey: 2200 Fletcher Ave, 4th Floor, Fort Lee, NJ 07024</p>
+        
+            <section class="schedule">
+                <p><strong>Horario de Atención:</strong></p>
+                <ul>
+                    <li>Las 24 horas del dia</li>
+                </ul>
+            </section>
+        </section>
+
+        <a href="index.html" class="back-button">Retroceder</a>
+    </div>
+</body>
+</html>
+
