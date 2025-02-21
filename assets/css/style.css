@@ -62,7 +62,7 @@ body {
 
 /* Cuando hagas scroll, se agregará esta clase */
 .navbar.scrolled {
-    background: rgba(100, 98, 94, 0.2); /* Fondo semitransparente */
+    background: rgba(100, 98, 94, 0.5); /* Fondo semitransparente */
     backdrop-filter: blur(10px); /* Efecto borroso */
 }
 
